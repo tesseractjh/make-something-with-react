@@ -34,7 +34,7 @@ function App() {
       gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',
       gap: '10px'
     }}>
-      {datas.length ? datas.map((data) => <Card data={data} handleClick={handleClick} />) : 'Loading...'}
+      {datas.length ? datas.map((data) => <Card key={`card-${data.id}`} data={data} handleClick={handleClick} />) : 'Loading...'}
     </div>
   );
 }

@@ -23,7 +23,7 @@ function Card({ data: { description, url, topics }, handleClick }: CardProps) {
         flexWrap: 'wrap',
         width: '100%'
       }}>
-        {topics.map(topic => <Topic topic={topic} handleClick={handleClick} />)}
+        {topics.map(topic => <Topic key={`topic-${topic}`} topic={topic} handleClick={handleClick} />)}
       </p>
       <iframe 
         style={{ border: '3px solid black' }}
